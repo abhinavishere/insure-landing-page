@@ -12,6 +12,10 @@ html{
     font-size: 16px;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 :root{
     --dark-violet:hsl(256, 26%, 20%);
     --grayish-blue:hsl(216, 30%, 68%);
