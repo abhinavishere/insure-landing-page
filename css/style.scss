@@ -243,6 +243,7 @@ html{
                 padding: 1em 2em ;
                 text-decoration: none;
                 color: var(--very-light-gray);
+                background: var(--dark-violet);
             }
             a:hover , a:focus{
                 background: var(--very-light-gray);
@@ -257,13 +258,14 @@ html{
     background: var(--very-light-gray);
     color: var(--very-dark-violet);
     position: relative;
+    z-index: 1;
     &_pattern{
         &_desktop{
             width: 50;
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 2;
+            z-index: -1;
         }
         &_mobile{
             display: none;
@@ -310,9 +312,25 @@ html{
             
         }
     }
+
+    .attribution{
+        position: absolute;
+        bottom: 10px;
+        width: max-content;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: var(--body);
+        letter-spacing: 1px;
+        color: var(--dark-grayish-violet);
+        a{
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--very-dark-violet);
+        }
+    }
 }
 
-@media all and (max-width:1100px){
+@media all and (max-width:700px){
     
     body{
         position: relative;
@@ -337,9 +355,9 @@ html{
                 top: 72px;
                 flex-direction: column;
                 width: 100;
-                padding-block: 3em;
+                padding-block: 6em;
                 // max-width: 375px;
-                height: 80vh;
+                height: calc(100vh - 72px);
                 li+li{
                     margin-top: 0.2em;
                     margin-left: 0;
