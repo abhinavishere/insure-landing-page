@@ -330,7 +330,7 @@ html{
             &_links{
                 // display: none;
                 position: absolute;
-                border: 1px solid red;
+                // border: 1px solid red;
                 z-index: 100;
                 right: 0;
                 left: 0;
@@ -353,7 +353,7 @@ html{
                 color: var(--grayish-blue);
                 transform: scaleX(0);
                 transform-origin: right;
-                transition: transform 250ms ease-in;
+                transition: transform 250ms ease-in-out;
                 li{
                     a{
                         position: relative;
