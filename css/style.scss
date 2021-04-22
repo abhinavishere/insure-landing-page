@@ -39,6 +39,9 @@ html{
         &_hamburger{
             display: none;
         }
+        &_close{
+            display: none;
+        }
     }
     &_nav_links{
         display: flex;
@@ -311,15 +314,63 @@ html{
 
 @media all and (max-width:1100px){
     
-    
+    body{
+        position: relative;
+    }
     // header
     .header{
+        
         &_nav{
+            
+            z-index: 100;
             &_hamburger{
                 display: block;
             }
+
             &_links{
-                display: none;
+                // display: none;
+                position: absolute;
+                border: 1px solid red;
+                z-index: 100;
+                right: 0;
+                left: 0;
+                top: 72px;
+                flex-direction: column;
+                width: 100;
+                padding-block: 3em;
+                // max-width: 375px;
+                height: 80vh;
+                li+li{
+                    margin-top: 0.2em;
+                    margin-left: 0;
+                }
+                justify-content: flex-start;
+                background: var(--very-dark-violet);
+                background-image: url(../images/bg-pattern-mobile-nav.svg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                color: var(--grayish-blue);
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 250ms ease-in;
+                li{
+                    a{
+                        position: relative;
+                        z-index: 100;
+                        display: block;
+                        width: 80%;
+                        margin-inline: auto;
+                        margin-block: 0.3em;
+                        text-align: center;
+                        color: var(--very-light-gray);
+                        padding: 0.3em 1em;
+                        border: 3px solid transparent;
+                    }
+                    a:hover , a:focus{
+                        border: 3px solid var(--very-light-gray);
+                    }
+                }
             }
         }
     }
